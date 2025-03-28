@@ -1,0 +1,83 @@
+.nav-bar {
+	width: 230px;
+	height: 100%;
+	background-color: white;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: var(--transition-timing-medium);
+	z-index: 10;
+	user-select: none;
+}
+
+.hide {
+	margin-left: -230px;
+}
+
+.list {
+	width: 100%;
+}
+
+.list-item {
+	list-style: none;
+	width: 90%;
+	height: 50px;
+	cursor: pointer;
+	transition: margin-left var(--transition-timing-medium) ease-in-out;
+	border-radius: var(--border-radius-low);
+	position: relative;
+	margin: 10px auto;
+}
+
+.list-item:hover {
+	background-color: var(--color-white);
+}
+
+.list-item::before {
+	content: '';
+	height: 100%;
+	width: 5px;
+	background-color: var(--color-blue);
+	position: absolute;
+	left: -20px;
+	transition: var(--transition-timing-fast);
+}
+
+.current {
+	background-color: var(--color-white);
+}
+
+.current::before {
+	content: '';
+	height: 100%;
+	width: 5px;
+	background-color: var(--color-blue);
+	position: absolute;
+	translate: 20px 0px;
+	transition: var(--transition-timing-fast);
+}
+
+.list-item>a {
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	padding-left: 25px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.list-item>a>svg {
+	font-size: 24px;
+}
+
+@media (width<=800px) {
+	.nav-bar {
+		position: fixed;
+	}
+
+	.list {
+		height: calc(100% - 75px);
+		width: 100%;
+		overflow: auto;
+	}
+}

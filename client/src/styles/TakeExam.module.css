@@ -1,0 +1,42 @@
+.take-exam-container {
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	overflow: auto;
+	background: var(--color-background);
+}
+
+.data-container {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.title>div {
+	font-size: 18px !important;
+	font-weight: bold;
+}
+
+.questions-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.action-items {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 10px;
+}
